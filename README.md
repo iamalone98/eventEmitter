@@ -17,12 +17,12 @@ import (
 func main() {
   emitter := eventEmitter.NewEventEmitter()
 
-	emitter.On("test", func(data interface{}) {
-		if v, ok := data.(int); ok {
-			fmt.Println(v)
-		}
-	})
+  emitter.On("test", func(data interface{}) {
+    if v, ok := data.(int); ok {
+      fmt.Println(v)
+    }
+  })
 
-	emitter.Emit("test", 1)
+  emitter.Emit("test", 1)
 }
 ```
